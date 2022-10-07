@@ -1,4 +1,5 @@
 # FMRI_Similarity_CNN
+ For my first psychology undergraduate research project. The corresponding paper is "independent_study.pdf"
  Using either representational similarity analysis or canonical correlation analysis with fmri data to try improve object recognition in a CNN
 
 ## Installing
