@@ -1,3 +1,14 @@
+Note in 2025: 
+I have been attempting to improve on this experiment to see if the lack of improvement in classification performance was a bug in the code or if it was the FMRI data
+and have upgraded to a more readable tf.keras implementation of the network. From what I've found so far is that the CORNETz implementation (basically alexnet) is 
+correct, and the pairwise representation similarity auxillary loss function is also correct and if I use a pretrained CNN as the teacher for the similarity targets and 
+pretrain a student network with only the representational similarity loss it subsequently learns the classification task faster than the teacher network. This strongly 
+suggests that something about the FMRI reprepresentational similarities must be re-evaluated, or maybe a different FMRI dataset should be used...
+Currently I don't have free GPU access and Tensorflow-metal has a bug at the moment that makes it unusable with my M4 mac mini so I will have to update with later when I find affordable compute
+to train a signiicant number of models. 
+
+Also this repo was based on a repo from Cassidy Pirlot who was extending the project with CCA, and prior Sahir was working on the project extended by adding PCA on the neural recordings. The original paper this work extends is Feder et. al 2019. The work I did ontop of this was update to tf2.0, Preprocessed FMRI data from a human dataset, and replicated the prior experiements with this hunman dataset instead of using neural recordings from the visual cortex anesthetized monkeys. 
+
 # FMRI_Similarity_CNN
  For my first psychology undergraduate research project. The corresponding paper is "independent_study.pdf"
  Using either representational similarity analysis or canonical correlation analysis with fmri data to try improve object recognition in a CNN
